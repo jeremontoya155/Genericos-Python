@@ -28,4 +28,31 @@ def cargarNumero():
     print(f"La multiplicatoria de F({variable_1})={R_multiplicatoria}")
 
 
-cargarNumero()
+def fizz_buzz_lista(numeros):
+    resultado = []
+    for i in numeros:
+        item = ""
+        if i % 3 == 0:
+            item += "Fizz"
+        if i % 5 == 0:
+            item += "Buzz"
+        # Agrega "Fizz", "Buzz", "FizzBuzz", o el número
+        resultado.append(item or i)
+    return resultado
+
+
+# Ejemplo de uso
+numeros = [1, 3, 5, 10, 15, 16, 18]
+resultados = fizz_buzz_lista(numeros)
+
+list(map(print, resultados))
+
+
+def fizz_buzz(n):
+    for i in range(1, n + 1):
+        output = ""
+        if i % 3 == 0:
+            output += "Fizz"
+        if i % 5 == 0:
+            output += "Buzz"
+        print(output or i)
